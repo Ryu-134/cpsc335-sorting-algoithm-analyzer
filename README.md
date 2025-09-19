@@ -1,29 +1,39 @@
+# Current Work:
+## Casey: 
+- ##### updating half of provided in-class sorting algos to take input of list of random #'s
+- ##### creating a benchmark class to generate random string of #'s --> run algorithms to test
+- ##### creating test class to run algo + benchmark via CLI to see if they work before going to GUI
+
+
+
+---
 # TDL: 
 
 ## A: Classes to make:
-
+---
 ### 1: Algos
 
-#### a: bubble sort
-#### b: insertion sort
-#### c: merge sort
-#### d: quick sort
-#### e: heap sort
-#### f: counting sort
-#### g: ---- sort
-#### h: ---- sort
-#### i: ---- sort
+- #### bubble sort
+- #### insertion sort
+- #### merge sort
+- #### quick sort
+- #### heap sort
+- #### counting sort
+- #### ---- sort
+- #### ---- sort
+- #### ---- sort
 
-
+---
 ### 2: Random Number Generator
-
+---
 ### 3: GUI
-
+---
 ### 4: Timer
-
+---
 ## B: Slides
-
+---
 ## C: Demo Video ----> Linkedin Post
+
 
 
 
