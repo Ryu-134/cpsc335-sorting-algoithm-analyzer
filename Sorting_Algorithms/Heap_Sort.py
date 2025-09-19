@@ -1,4 +1,3 @@
-
 def heap_sort(arr):
 
     def sift_down(a, start, end):
@@ -27,4 +26,3 @@ def heap_sort(arr):
         a[0], a[end] = a[end], a[0]
         sift_down(a, 0, end - 1)
     return a
-        

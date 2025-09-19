@@ -4,7 +4,10 @@
 - ##### creating a benchmark class to generate random string of #'s --> run algorithms to test
 - ##### creating test class to run algo + benchmark via CLI to see if they work before going to GUI
 
-
+## Brian:
+- ##### updating the rest of the in-class sorting algos that take input of list of random nums
+- ##### create and template the presentation slides
+- ##### will help with creating the GUI with pygame
 
 ---
 # TDL: 
