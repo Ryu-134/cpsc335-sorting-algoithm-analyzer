@@ -1,4 +1,3 @@
-
 def counting_sort(arr):
     
     if not arr:

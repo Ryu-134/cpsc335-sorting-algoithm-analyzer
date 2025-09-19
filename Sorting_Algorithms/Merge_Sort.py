@@ -1,4 +1,3 @@
-# merge sort
 def merge_sort(arr):
     if len(arr) <= 1:
         return arr
@@ -25,11 +24,3 @@ def merge(left, right):
     result.extend(left[i:])
     result.extend(right[j:])
     return result
-
-
-# test with demo
-if __name__ == "__main__":
-    data = [13, 12, 11, 5, 6]
-    print("Unsorted data:", data)
-    sorted_data = merge_sort(data)
-    print("sorted data:", sorted_data)

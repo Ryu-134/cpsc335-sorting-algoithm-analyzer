@@ -3,6 +3,9 @@
 from .Counting_Sort import counting_sort
 from .Heap_Sort import heap_sort
 from .Quick_Sort import quick_sort
+from .Bubble_Sort import bubble_sort
+from .Insertion_sort import Insertion_sort
+from .Merge_Sort import merge_sort
 # import remaining algorithms
 
 
@@ -11,8 +14,10 @@ from .Quick_Sort import quick_sort
 ALGORITHMS = {
     "Counting": counting_sort,
     "Heap": heap_sort,
-    "Quick": quick_sort    
+    "Quick": quick_sort,
+    "Bubble": bubble_sort,
+    "Insertion": Insertion_sort,
+    "Merge": merge_sort
+
     # fill in remaining algorithms
 }
-
-

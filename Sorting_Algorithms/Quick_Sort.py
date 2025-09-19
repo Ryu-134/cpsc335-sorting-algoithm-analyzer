@@ -1,4 +1,3 @@
-
 def quick_sort(arr):
     
     def partition(low, high):
@@ -23,5 +22,3 @@ def quick_sort(arr):
             sort(i, high)        
     sort(0, len(arr) - 1)
     return arr  
-
-
