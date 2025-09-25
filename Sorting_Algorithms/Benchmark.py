@@ -1,8 +1,8 @@
 # class to generate random numbers and run timer to benchmark all algorithms
-
+# wanted to encapsulate all timing logic here and keep algorithm files distinct
 import random
 import time
-from Sorting_Algorithms import ALGORITHMS
+from . import ALGORITHMS
 
 
 # function to create random list of numbers to sort

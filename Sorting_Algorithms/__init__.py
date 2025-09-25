@@ -8,7 +8,7 @@ from .Insertion_sort import insertion_sort
 from .Merge_Sort import merge_sort
 from .Bucket_Sort import bucket_sort
 from .Radix_Sort import radix_sort_lsd
-from .Quick_Select import timed_quick_select
+from .Quick_Select import quick_select
 
 
 # import remaining algorithms
@@ -25,5 +25,5 @@ ALGORITHMS = {
     "Merge": merge_sort,
     "Bucket": bucket_sort,
     "Radix": radix_sort_lsd,
-    "Select": timed_quick_select
+    "Select": (lambda arr: quick_select(arr, 0, len(arr) - 1, len(arr) // 2))
 }

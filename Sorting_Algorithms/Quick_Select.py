@@ -32,11 +32,5 @@ def timed_quick_select(arr: List[int], k: int) -> int:
     print(f"[QuickSelect] found k={k} in {end-start:.6f} sec")
     return result 
 
-#DEMO the example
-incomes = [50000, 72000, 48000, 93000, 60000, 83000, 75000]
-median_idx = len(incomes) // 2 
-median_income = timed_quick_select(incomes, median_idx)
-print("Median income:", median_income)
-    
                 
         
