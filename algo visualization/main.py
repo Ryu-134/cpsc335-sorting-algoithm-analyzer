@@ -1,7 +1,7 @@
 import pygame
 import sys
 import random
-from sorters import bubble_sort, insertion_sort, selection_sort, merge_sort, quick_sort
+from sorters import bubble_sort, insertion_sort, selection_sort, merge_sort, quick_sort, heap_sort, counting_sort, bucket_sort, radix_sort_lsd
 
 # Constants
 WINDOW_WIDTH = 1280
@@ -41,7 +41,11 @@ class SorterVisualizer:
             "Insertion Sort": insertion_sort,
             "Selection Sort": selection_sort,
             "Merge Sort": merge_sort,
-            "Quick Sort": quick_sort
+            "Quick Sort": quick_sort,
+            "Heap Sort": heap_sort,
+            "Counting Sort": counting_sort,
+            "Bucket Sort": bucket_sort,
+            "Radix Sort": radix_sort_lsd
         }
         self.algorithm_names = list(self.available_algorithms.keys())
         self.current_algorithm_index = 0
