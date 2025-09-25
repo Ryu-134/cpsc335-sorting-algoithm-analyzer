@@ -22,9 +22,9 @@
 - #### quick sort
 - #### heap sort
 - #### counting sort
-- #### ---- sort
-- #### ---- sort
-- #### ---- sort
+- #### quick select sort
+- #### bucket sort
+- #### radix sort
 
 ---
 ### 2: Random Number Generator
