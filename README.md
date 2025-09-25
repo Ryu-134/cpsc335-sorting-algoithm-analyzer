@@ -3,10 +3,12 @@
 - ##### creating test class to run all algorithms + benchmark via CLI to see if they work before going to GUI
 
 ## Brian:
-- ##### updating the rest of the in-class sorting algos that take input of list of random nums
 - ##### create and template the presentation slides
-- ##### will help with creating the GUI with pygame
+- ##### will help with creating the GUI with pygame if needed
 
+## Brandon:
+- ##### working on GUI
+- 
 ---
 # TDL: 
 
