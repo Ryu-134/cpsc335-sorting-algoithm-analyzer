@@ -1,14 +1,14 @@
 # Current Work:
 ## Casey: 
-- ##### updating half of provided in-class sorting algos to take input of list of random #'s
-- ##### creating a benchmark class to generate random string of #'s --> run algorithms to test
-- ##### creating test class to run algo + benchmark via CLI to see if they work before going to GUI
+- ##### creating test class to run all algorithms + benchmark via CLI to see if they work before going to GUI
 
 ## Brian:
-- ##### updating the rest of the in-class sorting algos that take input of list of random nums
 - ##### create and template the presentation slides
-- ##### will help with creating the GUI with pygame
+- ##### will help with creating the GUI with pygame if needed
 
+## Brandon:
+- ##### working on GUI
+- 
 ---
 # TDL: 
 
@@ -22,9 +22,9 @@
 - #### quick sort
 - #### heap sort
 - #### counting sort
-- #### ---- sort
-- #### ---- sort
-- #### ---- sort
+- #### quick select sort
+- #### bucket sort
+- #### radix sort
 
 ---
 ### 2: Random Number Generator

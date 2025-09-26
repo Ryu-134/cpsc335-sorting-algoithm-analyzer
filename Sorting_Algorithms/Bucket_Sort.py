@@ -1,0 +1,35 @@
+import time 
+from typing import List
+
+def bucket_sort(arr: List[float]) -> List[float]:
+    
+    n = len(arr)
+    if n == 0:
+        return arr
+
+    start = time.perf_counter()
+    # adjusted to fix edge case where bucket index == # of buckets
+    buckets = [[] for _ in range(n)]
+
+    mn, mx = min(arr), max(arr)
+    span = mx - mn if mx != mn else 1
+
+    for x in arr:
+        idx = int((x - mn) * n / span)
+        if idx == n:   # clamp edge case for max value
+            idx = n - 1
+        buckets[idx].append(x)
+    
+    for i in range(n):
+        buckets[i].sort()
+        
+    result = []
+    for b in buckets:
+        result.extend(b)
+        
+    end = time.perf_counter()
+    print(f"[Bucket] sort of {n} elements in {end-start:.6f} sec")
+    
+    return result
+        
+

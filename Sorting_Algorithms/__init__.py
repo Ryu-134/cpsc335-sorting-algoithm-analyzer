@@ -4,8 +4,13 @@ from .Counting_Sort import counting_sort
 from .Heap_Sort import heap_sort
 from .Quick_Sort import quick_sort
 from .Bubble_Sort import bubble_sort
-from .Insertion_sort import Insertion_sort
+from .Insertion_sort import insertion_sort
 from .Merge_Sort import merge_sort
+from .Bucket_Sort import bucket_sort
+from .Radix_Sort import radix_sort_lsd
+from .Quick_Select import quick_select
+
+
 # import remaining algorithms
 
 
@@ -16,8 +21,9 @@ ALGORITHMS = {
     "Heap": heap_sort,
     "Quick": quick_sort,
     "Bubble": bubble_sort,
-    "Insertion": Insertion_sort,
-    "Merge": merge_sort
-
-    # fill in remaining algorithms
+    "Insertion": insertion_sort,
+    "Merge": merge_sort,
+    "Bucket": bucket_sort,
+    "Radix": radix_sort_lsd,
+    "Select": (lambda arr: quick_select(arr, 0, len(arr) - 1, len(arr) // 2))
 }
