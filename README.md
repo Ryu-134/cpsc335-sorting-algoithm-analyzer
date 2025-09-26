@@ -12,7 +12,7 @@ The project includes both benchmarking code (for performance comparison) and vis
 * Contains pure algorithm implementations (e.g., Bubble Sort, Quick Sort, Merge Sort, Counting Sort, etc.).
 * These versions are **optimized for benchmarking only** — they avoid visualization overhead to ensure accurate performance measurements.
 
-### 2. `algo_visualization/`
+### 2. `algo visualization/`
 
 * Contains sorting algorithms adapted for **visualization demos**.
 * Includes logic for animating the sorting process using matplotlib.
@@ -58,7 +58,7 @@ This dataset includes results for input sizes of **100, 1000, and 10000** under 
 * Run algorithm visualizations:
 
   ```bash
-  python algo_visualization/main.py
+  python algo visualization/main.py
   ```
 
 * Generate performance comparison plot:
