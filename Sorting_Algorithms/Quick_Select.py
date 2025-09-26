@@ -1,8 +1,10 @@
-import time
+# Quick Select Algorithm: in-place, not stable 
+# Time: Average: O(n), Worst O(n^2) 
+
+import random
 from typing import List
 
-def partition(arr: List[int], low: int, high: int) -> int:
-    
+def partition(arr: List[int], low: int, high: int) -> int:    
     pivot = arr[high] 
     i = low 
     for j in range(low, high):
@@ -13,7 +15,13 @@ def partition(arr: List[int], low: int, high: int) -> int:
     return i
 
 def quick_select(arr: List[int], low: int, high: int, k: int) -> int:
-    #Recursive Quick Select
+    if k < low or k > high:     # bounds + base case
+        raise IndexError("k out of range")
+    if low == high:
+        return arr[low]
+    
+    pivot_index = random.randint(low, high)     # randomize pivot to avoid RecursionError
+    arr[pivot_index], arr[high] = arr[high], arr[pivot_index]
     
     if low  <= high:
         pi = partition(arr, low, high)
@@ -23,14 +31,4 @@ def quick_select(arr: List[int], low: int, high: int, k: int) -> int:
             return quick_select(arr, low, pi-1, k)
         else: 
             return quick_select(arr, pi+1, high, k)
-        
-def timed_quick_select(arr: List[int], k: int) -> int:
-    
-    start= time.perf_counter()
-    result = quick_select(arr, 0, len(arr)-1, k)
-    end = time.perf_counter()
-    print(f"[QuickSelect] found k={k} in {end-start:.6f} sec")
-    return result 
-
-                
-        
+     

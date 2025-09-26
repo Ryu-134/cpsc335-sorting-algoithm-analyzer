@@ -1,35 +1,29 @@
-import time 
-from typing import List
+# Bucket Sort Algorithm: in-place, stable (as equal buckets go to same bucket and python timsort is stable)
+# Time: Average: O(n + k), Worst: O(n^2)
 
-def bucket_sort(arr: List[float]) -> List[float]:
-    
+
+def bucket_sort(arr):    
     n = len(arr)
     if n == 0:
         return arr
-
-    start = time.perf_counter()
-    # adjusted to fix edge case where bucket index == # of buckets
-    buckets = [[] for _ in range(n)]
-
+    
+    buckets = [[] for _ in range(n)]     # create n empty buckets 
     mn, mx = min(arr), max(arr)
-    span = mx - mn if mx != mn else 1
+    span = mx - mn if mx != mn else 1   # avoid divide by zero if all equal
 
-    for x in arr:
+    for x in arr:   # distribute into buckets by normalized index and clamp max element to last bucket
         idx = int((x - mn) * n / span)
-        if idx == n:   # clamp edge case for max value
+        if idx == n:       
             idx = n - 1
         buckets[idx].append(x)
     
-    for i in range(n):
-        buckets[i].sort()
+    for b in buckets:   # sort each bucket via timsort
+        b.sort()
         
-    result = []
+    output = []
     for b in buckets:
-        result.extend(b)
-        
-    end = time.perf_counter()
-    print(f"[Bucket] sort of {n} elements in {end-start:.6f} sec")
-    
-    return result
+        output.extend(b)
+    arr[:] = output #NOTE: copy merged result into arr via shallow copy to act in-place for timing
+    return arr
         
 

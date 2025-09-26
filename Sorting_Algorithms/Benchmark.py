@@ -1,25 +1,32 @@
-# class to generate random numbers and run timer to benchmark all algorithms
-# wanted to encapsulate all timing logic here and keep algorithm files distinct
+# generate input arrays and time the algorithms 
+# encapsulate all timing logic here and keep algorithm files distinct
+
+
 import random
 import time
-from . import ALGORITHMS
 
 
 # function to create random list of numbers to sort
-def generate_data(input, seed = None):      # have user decide # of random #'s to generate and have seed parameter to possibly input same seed to test
-    rng = random.Random(seed)               # create random seed
+def generate_data(n, seed = None, condition="random"):      # defaults to random condition; conditions: random, sorted, reverse
+    rng = random.Random(seed)               # create random seed OR is deterministic if a seed is provided
     values = [] 
-    high = max(10, input * 10)
-    for val in range(input):
-        values.append(rng.randint(0, high))
-    return values 
+    high = max(10, n * 10)      # widen value range as n grows
+    for _ in range(n):
+        values.append(rng.randint(-high, high))
 
+    if condition == "random":
+        return values
+    elif condition == "sorted":
+        return sorted(values)
+    elif condition == "reverse":
+        return sorted(values, reverse=True)
+            
 
 # function to time algorithms
 def time_algorithms(function, data):
-    arr = data[:]
+    arr = data[:]       # each algorithm MUST get identical input for accurate analysis --> create shallow copy via slicing with arr[:]
     start = time.perf_counter()
-    function(arr)
+    function(arr)   # sort IN-PLACE and ignore return; ONLY care about time it takes to sort
     end = time.perf_counter()
     elapsed = end - start
     return elapsed    
