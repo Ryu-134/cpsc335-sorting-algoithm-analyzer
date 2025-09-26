@@ -4,11 +4,11 @@
 
 ## Brian:
 - ##### create and template the presentation slides
-- ##### will help with creating the GUI with pygame if needed
+- ##### implemented heap, bucket, counting, and radix sort to GUI visualizer
+- ##### present slides/demo
 
 ## Brandon:
-- ##### working on GUI
-- 
+- ##### GUI
 ---
 # TDL: 
 
