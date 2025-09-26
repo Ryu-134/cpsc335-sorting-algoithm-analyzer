@@ -1,4 +1,4 @@
-# python package to bring in and run all algorithms at once to time them at once
+# package registry to iterate all algorithms at once via the benchmark
 
 from .Counting_Sort import counting_sort
 from .Heap_Sort import heap_sort
@@ -9,11 +9,6 @@ from .Merge_Sort import merge_sort
 from .Bucket_Sort import bucket_sort
 from .Radix_Sort import radix_sort_lsd
 from .Quick_Select import quick_select
-
-
-# import remaining algorithms
-
-
 
 
 ALGORITHMS = {
